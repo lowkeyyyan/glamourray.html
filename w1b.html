@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Glamourray - Product Details</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		/* General Reset */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			font-family: Arial, sans-serif;
+			color: #333;
+			background-color: black;
+			line-height: 1.6;
+		}
+		a {
+			text-decoration: none;
+			color: #333;
+		}
+		ul {
+			list-style: none;
+		}
+
+		/* Header */
+		header {
+			background-color: black;
+			color: #fff;
+			padding: 1rem 0;
+		}
+		header nav ul {
+			display: flex;
+			justify-content: center;
+			gap: 2rem;
+		}
+		header nav ul li a {
+			color: #fff;
+			font-weight: bold;
+			padding: 0.5rem 1rem;
+			transition: background-color 0.3s ease;
+		}
+		header nav ul li a:hover {
+			background-color: #555;
+			border-radius: 5px;
+		}
+
+		/* Hero Section */
+		.hero {
+			position: relative;
+			width: 100%;
+			height: 500px;
+			background-color: #333;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+		.hero img {
+			width: 100%;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+		.hero .arrows {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			padding: 0 20px;
+			transform: translateY(-50%);
+		}
+		.hero .arrow {
+			background-color: rgba(0, 0, 0, 0.5);
+			color: #fff;
+			padding: 10px;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+		.hero .arrow:hover {
+			background-color: #555;
+		}
+
+		/* Product Details */
+		.product-details {
+			padding: 3rem 2rem;
+			text-align: center;
+			color: white;
+		}
+		.product-details h2 {
+			font-size: 2.5rem;
+			margin-bottom: 1.5rem;
+		}
+		.product-details p {
+			font-size: 1.2rem;
+			color: #ddd;
+			margin-bottom: 1rem;
+		}
+		.product-details .price {
+			font-size: 1.5rem;
+			color: #EA70A5;
+			margin-bottom: 1rem;
+		}
+		.product-details .description {
+			font-size: 1rem;
+			color: #bbb;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		/* Ratings Section */
+		.ratings {
+			margin: 1.5rem 0;
+		}
+		.ratings span {
+			font-size: 1.2rem;
+			color: #EA70A5;
+		}
+		.ratings .stars {
+			margin-top: 0.5rem;
+			font-size: 1.5rem;
+		}
+		
+
+		/* Add to Cart */
+		.add-to-cart {
+			margin-top: 1rem;
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+		}
+		.add-to-cart button {
+			padding: 1rem 2rem;
+			background-color: #333;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 1.2rem;
+			transition: background-color 0.3s ease;
+		}
+	.add-to-cart button:hover {
+			background-color: #EA70A5;
+		}
+
+		/* Comments Section */
+		.comments-section {
+			margin-top: 2rem;
+			text-align: center;
+		}
+		.comments-section h3 {
+			font-size: 2rem;
+			margin-bottom: 1rem;
+			color: white;
+		}
+		.comments-section form {
+			max-width: 600px;
+			margin: 0 auto;
+			text-align: left;
+		}
+		.comments-section textarea {
+			width: 100%;
+			padding: 1rem;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			font-size: 1rem;
+			margin-bottom: 1rem;
+			color: #333;
+		}
+		.comments-section button {
+			padding: 1rem 2rem;
+			background-color: #333;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 1.2rem;
+			transition: background-color 0.3s ease;
+		}
+		.comments-section button:hover {
+			background-color: #555;
+		}
+
+
+		/* Sizing Section */
+		.sizing-section {
+			padding: 2rem;
+			text-align: center;
+			color: white;
+		}
+		.sizing-section h3 {
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
+		}
+		.sizing-section img {
+			width: 80%;
+			max-width: 500px;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		/* Footer */
+		footer {
+			padding: 1rem;
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+		}
+		footer ul {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+			margin-top: 1rem;
+		}
+		footer ul li a {
+			color: #fff;
+			font-size: 1.2rem;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Header -->
+	<header>
+		<nav>
+			<ul>
+				<li><a href="glamourraydm.html">Home</a></li>
+				<li><a href="womendm.html">Women</a></li>
+				<li><a href="mendm.html">Men</a></li>
+				<li><a href="accessoriesdm.html">Accessories</a></li>
+				<li><a href="glamourraydm.html">Contact</a></li>
+				<li><a href="men.html"><img src="LM.png" alt="Dark Mode" style="width: 24px; height: 24px;"> </a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<img src="1a3.png" alt="Product Image 1">
+		<div class="arrows"> 
+		<a href="w1a.html">
+			<div class="arrow">←</div>
+	    </a>
+	    <a href="w1c.html">
+			<div class="arrow">→</div> </a>
+		</div>
+	</section>
+
+<!-- Product Details Section -->
+<section class="product-details">
+	<h2>Glamouflage</h2>
+	<p class="price">₱ 500</p>
+	<p class="description">Description</p>
+Neckline: Strapless<br>  
+Collar: None<br>  
+Sleeve Type: Sleeveless<br>  
+Type: Mini Dress<br>  
+Details: Ruched Detail, Camouflage Pattern<br>  
+Style: Edgy<br>  
+Placket: Pullover<br>  
+Color: Black and Grey Camouflage<br>  
+Pattern Type: Camouflage<br>  
+Sleeve Length: Sleeveless<br>  
+Length: Mini<br>  
+Fabric: Non-Stretch<br>  
+Material: Polyester<br>  
+Composition: 100% Polyester<br>  
+Care Instructions: Hand wash cold<br>  
+Temperature: All seasons<br>  
+Sheer: No<br>  
+	
+	<div class="ratings">
+		<span>4.5</span>
+		<div class="stars">
+			&#9733; &#9733; &#9733; &#9733; &#9734;
+		</div>
+	</div>
+</section>
+
+	<!-- Add to Cart Section -->
+	<section class="add-to-cart">
+		<button>Add to Cart</button>
+<a href="ways1.html"> <button>Buy Now</button> </a>		
+	</section>
+<br>
+<br>
+
+	<!-- Sizing Section (Full Width Image, Now Moved Below Comments Section) -->
+	<section class="sizing-section">
+		<h3>Size Guide</h3>
+		<img src="size1.png" alt="Sizing Information" style="width: 100%; height: 500px; object-fit: cover;">
+	</section>
+<br>
+<br>
+	
+	<!-- Comments Section (Moved Below Add to Cart) -->
+	<section class="comments-section">
+		<h3>Customer Reviews</h3>
+		<form>
+			<textarea placeholder="Leave a comment..." rows="4"></textarea>
+			<button type="submit">Submit</button>
+		</form>
+		
+		<!-- Displaying existing comments (Example) -->
+		<div class="comment">
+			<p><strong>Fhukerat</strong> - <span>5 stars</span></p>
+			<p>"Great product! Very comfortable and fits well."</p>
+		</div>
+		<div class="comment">
+			<p><strong>Queen Dura</strong> - <span>4 stars</span></p>
+			<p>"I love it, but it took a while to arrive. Worth the wait!"</p>
+		</div>
+	</section>
+	
+	<!-- Footer Section -->
+	<footer>
+		<p>&copy; 2024 Glamourray</p>
+	</footer>
+</body>
+</html>
+

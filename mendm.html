@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Glamour Array</title>
+	<link rel="stylesheet" href="styles.css">
+	</head>
+	<style>
+		/* General Reset */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			font-family: Arial, sans-serif;
+			color: #333;
+			background-color: black;
+			line-height: 1.6;
+		}
+		a {
+			text-decoration: none;
+			color: #333;
+		}
+		ul {
+			list-style: none;
+		}
+		
+		/* Header */
+		header {
+			background-color: black;
+			color: #fff;
+			padding: 1rem 0;
+		}
+		header nav ul {
+			display: flex;
+			justify-content: center;
+			gap: 2rem;
+		}
+		header nav ul li a {
+			color: #fff;
+			font-weight: bold;
+			padding: 0.5rem 1rem;
+			transition: background-color 0.3s ease;
+		}
+		header nav ul li a:hover {
+			background-color: #555;
+			border-radius: 5px;
+		}
+
+		/* Hero Section */
+		.hero {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: 4rem 2rem;
+			background: #333;
+			text-align: center;
+		}
+		.hero h1 {
+			font-size: 2.5rem;
+			color: #333;
+			margin-bottom: 1rem;
+		}
+		.hero p {
+			font-size: 1.2rem;
+			color: #555;
+			margin-bottom: 2rem;
+		}
+		.hero button {
+			padding: 0.75rem 1.5rem;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 1rem;
+			transition: background-color 0.3s ease;
+		}
+		.hero button:hover {
+			background-color: #555;
+		}
+		.hero-image img {
+			max-width: 100%;
+			border-radius: 10px;
+		}
+
+		/* Section Styling */
+		.section {
+			padding: 3rem 2rem;
+			text-align: center;
+		}
+		.section h2 {
+			font-size: 2rem;
+			color: white;
+			margin-bottom: 1.5rem;
+		}
+		.products {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 2rem;
+		}
+		.product {
+			background-color: #333;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			padding: 1.5rem;
+			text-align: center;
+		}
+		.product img {
+			max-width: 100%;
+			border-radius: 5px;
+		}
+		.product h3 {
+			font-size: 1.2rem;
+			color: white;
+			margin: 0.5rem 0;
+		}
+		.product p {
+			color: white;
+			font-size: 1rem;
+		}
+
+		/* Contact Section */
+		.contact form {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		.contact form input, .contact form textarea, .contact form button {
+			padding: 0.75rem;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			font-size: 1rem;
+		}
+		.contact form button {
+			background-color: #333;
+			color: #fff;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		.contact form button:hover {
+			background-color: #555;
+		}
+		
+		.hidden-checkbox {
+		display: none; 
+
+}
+	.add-to-cart-button, .buy-now-button {
+		padding: 0.75rem 1.5rem;
+		background-color: black;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 1rem;
+		transition: background-color 0.3s ease;
+		margin-top: 1rem;
+	}
+	.hidden-checkbox:checked + .add-to-cart-button {
+		background-color: #599BFF;
+
+	}
+	
+
+		/* Footer */
+		footer {
+			padding: 1rem;
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+		}
+		footer ul {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+			margin-top: 1rem;
+		}
+		footer ul li a {
+			color: #fff;
+			font-size: 1.2rem;
+		}
+	</style>
+
+<body>
+	<!-- Header Section -->
+	<header>
+		<nav>
+			<ul>
+				<li><a href="glamourraydm.html">Home</a></li> 
+				<li><a href="womendm.html">Women</a></li>
+				<li><a href="mendm.html">Men</a></li>
+				<li><a href="accessoriesdm.html">Accessories</a></li>
+				<li><a href="glamourraydm.html">Contact</a></li>
+				<li><a href="men.html"><img src="LM.png" alt="Dark Mode" style="width: 24px; height: 24px;"> </a></li> 
+				
+			</ul>
+		</nav>
+	</header>
+
+
+
+	</section>
+	
+	<!-- Hero Section with Video -->
+	<section class="hero">
+	<video autoplay loop playsinline controls style="width: 100%; height: auto; border-radius: 10px;">
+	<source src="womanvid.mp4" type="video/mp4">
+	
+	</video>
+	</section>
+	
+
+	<!-- Women's Section -->
+	<section id="women" class="section">
+		<h2>Men's Fashion</h2>
+		<div class="products">
+			<div class="product">
+				<img src="m4.png" alt="Product 1">
+				<h3>Glamoutee</h3>
+					<p> <del> ₱ 750 </del> &nbsp; ₱ 350 </p>
+				<br>
+				<input type="checkbox" id="add-to-cart-1" class="hidden-checkbox">
+				<label for="add-to-cart-1" class="add-to-cart-button"> Add to Cart </label>
+				    <a href="m1.html">
+				    <button class="buy-now-button">Buy Now</button>
+				</a>
+			</div>
+			
+			<div class="product">
+				<img src="jacket.jpg" alt="Product 2">
+				<h3>Glambreaker</h3>
+			<p> <del> ₱ 1500  </del> &nbsp; ₱ 900</p>
+				<br>
+				<input type="checkbox" id="add-to-cart-2" class="hidden-checkbox">
+				<label for="add-to-cart-2" class="add-to-cart-button"> Add to Cart </label>
+				 <a href="m2.html">
+					<button class="buy-now-button">Buy Now</button>
+					</a>
+	        </div>
+				
+				<div class="product">
+				<img src="menshort.png" alt="Product 2">
+				<h3>Glamora Stardem Short</h3>
+			<p> <del> ₱ 1200 </del> &nbsp; ₱ 750 </p>
+				<br>
+				<input type="checkbox" id="add-to-cart-3" class="hidden-checkbox">
+				<label for="add-to-cart-3" class="add-to-cart-button"> Add to Cart </label>
+				<a href="m3.html">				
+					<button class="buy-now-button">Buy Now</button>
+			   </a>
+				</div>
+			
+       	<div class="product">
+				<img src="41.png" alt="Product 2">
+				<h3>Darkglam Pants</h3>
+			<p> <del> ₱ 999 </del> &nbsp; ₱ 800 </p>
+				<br>
+				<input type="checkbox" id="add-to-cart-4" class="hidden-checkbox">
+				<label for="add-to-cart-4" class="add-to-cart-button"> Add to Cart </label>
+             	<a href="m4.html">		
+					<button class="buy-now-button">Buy Now</button>
+				</a>
+				</div>
+
+<div class="product">
+	<img src="q.png" alt="Product 2">
+	<h3>...</h3>
+	<p> ...</p> 
+	<br>
+	<label for="add-to-cart" class="add-to-cart-button">Add to Cart</label>		
+	<button class="buy-now-button">Buy Now</button> 
+	</a>
+	</div> 
+	
+	<div class="product">
+	<img src="q.png" alt="Product 2">
+	<h3>...</h3>
+	<p> ...</p> 
+	<br>
+	<label for="add-to-cart" class="add-to-cart-button">Add to Cart</label>		
+	<button class="buy-now-button">Buy Now</button> 
+	</a>
+	</div> 
+	
+	<div class="product">
+		<img src="q.png" alt="Product 2">
+		<h3>...</h3>
+		<p> ...</p> 
+		<br>
+		<label for="add-to-cart" class="add-to-cart-button">Add to Cart</label>		
+		<button class="buy-now-button">Buy Now</button> 
+		</a>
+		</div> 
+		
+		<div class="product">
+		<img src="q.png" alt="Product 2">
+		<h3>...</h3>
+		<p> ...</p> 
+		<br>
+		<label for="add-to-cart" class="add-to-cart-button">Add to Cart</label>		
+		<button class="buy-now-button">Buy Now</button> 
+		</a>
+		</div> 
+		
+		</div>
+		</div>
+		
+	</section>
+
+
+
+
+
+	<!-- Footer Section -->
+	<footer>
+		<p>&copy; 2024 Glamourray </p>
+	
+	</footer>
+</body>
+</html>
